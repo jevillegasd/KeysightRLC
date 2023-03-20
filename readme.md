@@ -3,9 +3,9 @@
 Download the latest version of your RLC meter manual (https://www.keysight.com/us/en/assets/9018-06166)
 
 ## RLC Measurements
-The RLC meter uses the current and voltage to determine the real and imaginary components of the impedance in the testd element. From thes values, the equipement is able to calcualte other paraemeters (like inductance or capacitance) depending on an equivalent cirucuit model. It is fo the user to determine which equivalent circuit better describes the tested system an correct accordingly. The equivalent model used by the RLC meter can be changied by setting the "type of measurement" setting. In general, a low impedance, e.g. < 100 ohm (low resistance, high capacitances or low inductances), can be tested using the series model and high impedance (high resistances, low capacitances or high inductors) with a paralel model.
+An RLC meter uses the current and voltage to determine the real and imaginary components of the impedance in the tested element. From these values, the equipment is able to calcualte other parameters (like inductance or capacitance) depending on an equivalent circuit model. It is for the user to determine which equivalent circuit better describes the tested system and correct accordingly. The equivalent model used by the RLC meter can be changed by setting the "type of measurement" setting. In general, a low impedance, e.g. < 100 ohm (low resistance, high capacitances or low inductances), can be tested using the series model and high impedance (high resistances, low capacitances or high inductors) with a paralel model.
 
-To select the type of measurement the RLC meter will perform, you may select any o the following type parameters:
+To select the type of measurement the RLC meter will perform, you may select any of the following type parameters:
 {CPD|CPQ|CPG|CPRP|CSD|CSQ|CSRS|LPD|LPQ|LPG|LPRP|LPRD|LSD|LSQ|LSRS|LSRD|RX|ZTD|ZTR|GB|YTD|YTR|VDID}
 
 #### The first part of the type denotes the primary parameter, as:
@@ -29,9 +29,9 @@ To select the type of measurement the RLC meter will perform, you may select any
 - Phase angle
 
 ## The matlab code
-Use the function run_RLC to run a sweep and retreive the data from the equipmeetn, the fucntion parameters are:
+Use the function run_RLC to run a sweep and retreive the data from the equipment, the function parameters are:
 - instr:  A VISA connection to an instrument, either GPIB or TCP/IP. (e.g. instr = tcpclient(192.168.1.1, 5025,'Timeout',5);)
 - freqs:  A double array with the frequencies to measure. (e.g. freqs =linspace(20,1e3,100); )
 - func:   String with the type of measurement specification. (e.g. func = 'ZTD')
 
-Notebthat an instrument can only run 201 frequencies at a time.
+Note that an instrument can only run 201 frequencies at a time.
