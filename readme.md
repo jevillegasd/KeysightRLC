@@ -48,5 +48,5 @@ yyaxis left
 plot(f,Z); ylabel('Impedance (Ohm)')
 
 yyaxis rigth
-plot(f,T); ylabel('Angle (Ohm)')
+plot(f,T); ylabel('Angle (rad)')
 ```
