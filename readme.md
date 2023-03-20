@@ -35,3 +35,18 @@ Use the function run_RLC to run a sweep and retreive the data from the equipment
 - func:   String with the type of measurement specification. (e.g. func = 'ZTD')
 
 Note that an instrument can only run 201 frequencies at a time.
+
+```
+instr = tcpclient(192.168.1.1, 5025,'Timeout',10);
+f = logspace(20, 2e6, 201);
+func = 'ZTD';
+
+[Z, T] = run_RLC(instr,freqs, type);
+
+figure; 
+yyaxis left
+plot(f,Z); ylabel('Impedance (Ohm)')
+
+yyaxis rigth
+plot(f,T); ylabel('Angle (Ohm)')
+```
