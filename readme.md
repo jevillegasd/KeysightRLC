@@ -39,7 +39,7 @@ Note that an instrument can only run 201 frequencies at a time.
 ```
 instr = tcpclient(192.168.1.1, 5025,'Timeout',10);
 f = logspace(20, 2e6, 201);
-func = 'ZTD';
+func = 'ZTR';
 
 [Z, T] = run_RLC(instr,freqs, type);
 
